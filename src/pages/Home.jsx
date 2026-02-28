@@ -64,8 +64,8 @@ export default function Home() {
         }}
         breakpoints={{
           320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 6 },
         }}
       >
         <SwiperSlide>
@@ -122,7 +122,7 @@ export default function Home() {
         <h1>Categorias</h1>
         <hr></hr>
       </div>
-      <div className="categories-caroussel">
+      <div className="categories">
         <div className="categories-buttons">
           <Link to="/produtos/Rock">
             <p>Rock</p>

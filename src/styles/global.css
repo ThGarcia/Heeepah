@@ -51,6 +51,15 @@ hr {
     background-color: black;
 }
 
+.categories {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
 .categories-caroussel {
     width: 100%;
     display: flex;
@@ -129,4 +138,16 @@ hr {
     display: flex;
     flex-direction: row;
     gap: .25rem;
+}
+
+@media (max-width: 768px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+    }    
 }

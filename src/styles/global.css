@@ -1,0 +1,132 @@
+.page {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+}
+
+.categories-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-button {
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+}
+
+.login-button button {
+    background-color: black;
+    color: white;
+    padding: .1rem .4rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.login-button i {
+    border: .1rem solid black;
+    border-radius: 50%;
+    padding: .1rem;
+}
+
+.home-image {
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    width: 100%;
+    height: .2rem;
+    background-color: black;
+}
+
+.categories-caroussel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.swiper {
+    padding: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 45%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.categories-buttons {
+    height: 8rem;
+    width: 8rem;
+    border-radius: .5rem;
+    background-color: black;
+    text-align: center;
+}
+
+.categories-buttons p {
+    width: 100%;
+    margin-top: 6rem;
+    color: white;
+    padding: .1rem;
+    background-color: red;
+}
+
+.promotion-container {
+    text-align: center;
+}
+
+.promotion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+}
+
+.promotion img {
+    width: 100%;
+    height: auto;
+    position: relative;   
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+}

@@ -1,0 +1,15 @@
+paginas
+
+
+HEADER:
+temas variados -> /destaque
+placas decorativas -> /produtos
+personalizaveis -> /contato
+entrar -> login
+BOTOES:
+
+FOOTER:
+o que e heeeph? -> /heeeph
+de onde surgiu? -> /inicio
+nossos trabalhos -> /produtos
+agradecimentos -> agradecimentos

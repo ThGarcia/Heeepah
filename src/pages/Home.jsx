@@ -1,39 +1,59 @@
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import img from "../assets/banner.png";
-import vermelho from "../assets/vermelho.png";
-import heeeph from "../assets/heeeph.png";
-import verde from "../assets/verde.png";
+import img from "../assets/heeepah-banner.png";
+import h20x28 from "../assets/heeepah-20x28.png";
+import heeeph from "../assets/heeeph-center.png";
+import sides from "../assets/heeeph-sides.png";
+import h10x15 from "../assets/heeepah-10x15.png";
+import bandas from "../assets/button-bandas.png";
+import bebidas from "../assets/button-bebidas.png";
+import carros from "../assets/button-carros.png";
+import games from "../assets/button-games.png";
+import infantil from "../assets/button-infantil.png";
+import motos from "../assets/button-motos.png";
+import musica from "../assets/button-musica.png";
+import psicodelicos from "../assets/button-psicodelicos.png";
+import rpg from "../assets/button-rpg.png";
+import street from "../assets/button-street.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import gta from "../assets/quadro-gta.png";
+import naipes from "../assets/quadro-naipes.png";
+import roblox from "../assets/quadro-roblox.png";
+import skate from "../assets/quadro-skate.png";
 
-import "swiper/css";
-import "swiper/css/navigation";
+//import { Swiper, SwiperSlide } from "swiper/react";
+//import { Navigation, Autoplay } from "swiper/modules";
+
+//import "swiper/css";
+//import "swiper/css/navigation";
 
 export default function Home() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   return (
     <div className="page">
       <nav>
         <ul className="header-menu">
           <li>
-            <i className="ri-quill-pen-line"></i>
+            <Link to="/destaque">
+              <i className="ri-menu-line"></i>
+            </Link>
           </li>
-          <li>
-            <Link to="/destaque">Temas variados</Link>
+          <li className="nav-menu">
+            <Link to="/destaque">Placas decorativas</Link>
           </li>
-          <li>
-            <Link to="/produtos">Placas decorativas</Link>
+          <li className="nav-menu">
+            <Link to="/contato">Qualidade Garantida</Link>
           </li>
-          <li>
-            <Link to="/contato">Personalizaveis</Link>
+          <li className="nav-menu">
+            <Link to="/contato">Placas Personalizadas</Link>
           </li>
-          <li className="login-button">
-            <i className="ri-user-fill"></i>
-            <button onClick={() => navigate("/login")}>Entrar/Cadastrar</button>
+          <li className="nav-menu">
+            <Link to="/produtos">Todos Estilos</Link>
+          </li>
+          <li className="nav-img">
+            <img src={heeeph} alt="heeeph nome" />
           </li>
           <li>
             <Link to="/carrinho">
@@ -45,77 +65,17 @@ export default function Home() {
       <div>
         <img className="home-image" src={img} alt="Imagem de destaque" />
       </div>
-
-      <div className="categories-title">
-        <hr />
-        <h1>Destaques</h1>
-        <hr />
+      <div className="destak">
+        <Link to="/produtos/20x28">
+          <img src={h20x28} alt="quadros 20x28cm" />
+        </Link>
+        <img className="destak-img" src={sides} alt="quadros ilustrativos" />
+        <img src={heeeph} alt="heeeeph nome" />
+        <img className="destak-img" src={sides} alt="quadros ilustrativos" />
+        <Link to="produtos/10x15">
+          <img src={h10x15} alt="quadros 10x15cm" />
+        </Link>
       </div>
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        slidesPerView={4}
-        spaceBetween={16}
-        navigation
-        loop={true}
-        loopFillGroupWithBlank={true}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 3 },
-          1024: { slidesPerView: 6 },
-        }}
-      >
-        <SwiperSlide>
-          <div className="categories-buttons">
-            <Link to="/produtos/Rock">
-              <p>Rock</p>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="categories-buttons">
-            <Link to="/produtos/Bebidas">
-              <p>Bebidas</p>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="categories-buttons">
-            <Link to="/produtos/Decoração">
-              <p>Decoração</p>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="categories-buttons">
-            <Link to="/produtos/Psicodelicos">
-              <p>Psicodélicos</p>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="categories-buttons">
-            <Link to="/produtos/Jogos">
-              <p>Jogos</p>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="categories-buttons">
-            <Link to="/produtos/Carros">
-              <p>Carros</p>
-            </Link>
-          </div>
-        </SwiperSlide>
-      </Swiper>
 
       <div className="categories-title">
         <hr></hr>
@@ -124,54 +84,129 @@ export default function Home() {
       </div>
       <div className="categories">
         <div className="categories-buttons">
-          <Link to="/produtos/Rock">
-            <p>Rock</p>
+          <Link to="/produtos/bandas">
+            <img
+              className="categories-img"
+              src={bandas}
+              alt="categoria bandas"
+            />
           </Link>
         </div>
         <div className="categories-buttons">
-          <Link to="/produtos/Bebidas">
-            <p>Bebidas</p>
+          <Link to="/produtos/bebidas">
+            <img
+              className="categories-img"
+              src={bebidas}
+              alt="categoria bebidas"
+            />
           </Link>
         </div>
         <div className="categories-buttons">
-          <Link to="/produtos/Decoração">
-            <p>Decoração</p>
+          <Link to="/produtos/carros">
+            <img
+              className="categories-img"
+              src={carros}
+              alt="categoria carros"
+            />
           </Link>
         </div>
         <div className="categories-buttons">
-          <Link to="/produtos/Pscidodelicos">
-            <p>Psicodélicos</p>
+          <Link to="/produtos/games">
+            <img className="categories-img" src={games} alt="categoria games" />
           </Link>
         </div>
         <div className="categories-buttons">
-          <Link to="/produtos/Jogos">
-            <p>Jogos</p>
+          <Link to="/produtos/infantil">
+            <img
+              className="categories-img"
+              src={infantil}
+              alt="categoria infantil"
+            />
           </Link>
         </div>
         <div className="categories-buttons">
-          <Link to="/produtos/Carros">
-            <p>Carros</p>
+          <Link to="/produtos/motos">
+            <img className="categories-img" src={motos} alt="categoria motos" />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/musica">
+            <img
+              className="categories-img"
+              src={musica}
+              alt="categoria musica"
+            />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/psicodelicos">
+            <img
+              className="categories-img"
+              src={psicodelicos}
+              alt="categoria psicodelicos"
+            />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/rpg">
+            <img className="categories-img" src={rpg} alt="categoria rpg" />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/street">
+            <img
+              className="categories-img"
+              src={street}
+              alt="categoria street"
+            />
           </Link>
         </div>
       </div>
-      <hr></hr>
-      <div className="promotion-container">
-        <div className="promotion">
-          <img
-            className="promotion-vermelho"
-            src={vermelho}
-            alt="Imagem vermelha"
-          />
-          <img className="promotion-heeepah" src={heeeph} alt="Imagem heeeph" />
-          <img className="promotion-verde" src={verde} alt="Imagem verde" />
-        </div>
-        <h3>Transforme sua parede com estilo!!!</h3>
+
+      <div className="categories-title">
+        <hr></hr>
+        <h1>Novidades</h1>
+        <hr></hr>
       </div>
-      <hr></hr>
+      <div className="categories-news">
+        <div className="categories-buttons">
+          <Link to="/produtos/gta">
+            <img className="categories-quadros" src={gta} alt="quadro jogo gta" />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/roblox">
+            <img
+              className="categories-quadros"
+              src={roblox}
+              alt="quadro jogo roblox"
+            />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/naipes">
+            <img
+              className="categories-quadros"
+              src={naipes}
+              alt="quadro ilustrativo de naipes de baralho"
+            />
+          </Link>
+        </div>
+        <div className="categories-buttons">
+          <Link to="/produtos/skate">
+            <img
+              className="categories-quadros"
+              src={skate}
+              alt="quadro de um skatista"
+            />
+          </Link>
+        </div>
+      </div>
+        <hr></hr>
       <nav>
         <ul className="footer-menu">
           <li>
-            <h3>●</h3>
+            <h3 className="footer-point">●</h3>
           </li>
           <li>
             <Link to="/heeeph">
@@ -179,7 +214,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <h3>●</h3>
+            <h3 className="footer-point">●</h3>
           </li>
           <li>
             <Link to="/inicio">
@@ -187,7 +222,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <h3>●</h3>
+            <h3 className="footer-point">●</h3>
           </li>
           <li>
             <Link to="/produtos">
@@ -195,7 +230,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <h3>●</h3>
+            <h3 className="footer-point">●</h3>
           </li>
           <li>
             <Link to="/agradecimentos">
@@ -203,44 +238,11 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <h3>●</h3>
+            <h3 className="footer-point">●</h3>
           </li>
         </ul>
       </nav>
 
-      <footer className="footer">
-        <p>©heeeph.com.br</p>
-        <div className="footer-social">
-          <a
-            href="https://api.whatsapp.com/send?phone=5548984972129&text=Olá,%20tenho%20interesse%20em%20mais%20informações."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              <i className="ri-whatsapp-line"></i>
-            </span>
-          </a>
-          <a
-            href="https://www.facebook.com/heeeph"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="ri-facebook-fill"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/heeeph"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="ri-instagram-fill"></i>
-          </a>
-          <a href="mailto:heeeph@outlook.com.br?subject=Contato%20por%20site&body=Olá,%20tenho%20interesse%20em%20mais%20informações.">
-            <span>
-              <i className="ri-mail-line"></i>
-            </span>
-          </a>
-        </div>
-      </footer>
     </div>
   );
 }

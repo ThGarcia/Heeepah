@@ -1,11 +1,12 @@
-//import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import img from "../assets/heeepah-banner.png";
 import h20x28 from "../assets/heeepah-20x28.png";
+import cachacas from "../assets/placas-cachaca.png";
 import heeeph from "../assets/heeeph-center.png";
-import sides from "../assets/heeeph-sides.png";
+import skates from "../assets/placas-skate.png";
 import h10x15 from "../assets/heeepah-10x15.png";
+
 import bandas from "../assets/button-bandas.png";
 import bebidas from "../assets/button-bebidas.png";
 import carros from "../assets/button-carros.png";
@@ -22,15 +23,7 @@ import naipes from "../assets/quadro-naipes.png";
 import roblox from "../assets/quadro-roblox.png";
 import skate from "../assets/quadro-skate.png";
 
-//import { Swiper, SwiperSlide } from "swiper/react";
-//import { Navigation, Autoplay } from "swiper/modules";
-
-//import "swiper/css";
-//import "swiper/css/navigation";
-
 export default function Home() {
-  //const navigate = useNavigate();
-
   return (
     <div className="page">
       <nav>
@@ -69,9 +62,9 @@ export default function Home() {
         <Link to="/produtos/20x28">
           <img src={h20x28} alt="quadros 20x28cm" />
         </Link>
-        <img className="destak-img" src={sides} alt="quadros ilustrativos" />
+        <img className="destak-img" src={cachacas} alt="quadros cachaça" />
         <img src={heeeph} alt="heeeeph nome" />
-        <img className="destak-img" src={sides} alt="quadros ilustrativos" />
+        <img className="destak-img" src={skates} alt="quadros skate" />
         <Link to="produtos/10x15">
           <img src={h10x15} alt="quadros 10x15cm" />
         </Link>

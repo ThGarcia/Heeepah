@@ -27,3 +27,9 @@ ul {
 li {
     list-style: none;
 }
+
+@font-face {
+  font-family: "fonte";
+  src: url("../assets/TRTempusSansITC.woff2") format("woff2");
+  font-display: swap;
+}

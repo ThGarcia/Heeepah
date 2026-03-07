@@ -8,14 +8,35 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     color: white;
+    font-family: "fonte", sans-serif;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+
 }
 
 .header-menu {
+    width: 100%;
+    max-width: 1024px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin: 1rem;
+    margin: 0 1rem;
     align-items: center;
+}
+
+.header-img {
+    max-width: 25px;
+    max-height: 25px;
 }
 
 .nav-img {
@@ -52,6 +73,7 @@ body {
 }
 
 .home-image {
+    margin-top: 60px;
     width: 100%;
     height: auto;
 }
@@ -76,7 +98,7 @@ hr {
 .categories {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     margin: 2rem auto;
     gap: 1rem;
 }
@@ -103,12 +125,11 @@ hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 2rem auto;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .categories-quadros {
     width: 100%;
-    margin: auto;
 }
 
 .categories-caroussel {
@@ -162,17 +183,26 @@ hr {
 }
 
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
-.footer-social {
-    display: flex;
-    flex-direction: row;
-    gap: .25rem;
+.footer-title {
+    margin-bottom: 1rem;
+}
+
+.amarelo {
+    color: yellow;
+}
+
+.verde {
+    color: green;
+}
+
+.azul {
+    color: rgb(41, 219, 255);
 }
 
 @media (max-width: 768px) {
@@ -204,18 +234,13 @@ hr {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer-menu {
-        flex-direction: column;
-        gap: .5rem;
-    }
-
-    .footer-point {
-        display: none;
+    .footer {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .categories {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }

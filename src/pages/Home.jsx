@@ -76,13 +76,13 @@ export default function Home() {
 
       <div className="destak">
         <Link to="/produtos/20x28">
-          <img src={h20x28} alt="quadros 20x28cm" />
+          <img className="destak-hover" src={h20x28} alt="quadros 20x28cm" />
         </Link>
         <img className="destak-img" src={cachacas} alt="quadros cachaça" />
         <img src={heeeph} alt="heeeeph nome" />
         <img className="destak-img" src={skates} alt="quadros skate" />
         <Link to="produtos/10x15">
-          <img src={h10x15} alt="quadros 10x15cm" />
+          <img className="destak-hover" src={h10x15} alt="quadros 10x15cm" />
         </Link>
       </div>
 
